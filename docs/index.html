@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./clockTavo.png" type="image/png" />
+    <title>clockTavo</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+    }
+    #clock-container {
+      display: flex;
+      position: relative;
+      width: 50%;
+      min-height: 100vh;
+    }
+
+    /* 
+#clock-container { 
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}  */
+
+    #mark1 {
+      stroke: rgb(250, 197, 100);
+      stroke-width: 4;
+      stroke-dasharray: 0.5px 3.682022603px;
+    }
+
+    #mark2 {
+      stroke: rgb(250, 197, 100);
+      stroke-width: 6;
+      stroke-dasharray: 1px 19.91011302px;
+      fill: transparent;
+    }
+
+    #mark3 {
+      /* stroke: red; */
+      /* stroke: black; */
+      /* stroke-width: none; */
+      fill: black;
+    }
+
+    #circle1 {
+      fill: black;
+      stroke: rgb(250, 197, 100);
+      stroke-width: 3;
+    }
+
+    #circle2 {
+      fill: rgb(196, 195, 195);
+    }
+
+    #hour,
+    #min,
+    #sec {
+      stroke-width: 1px;
+      fill: rgb(250, 197, 100);
+    }
+    #sec {
+      stroke: red;
+    }
+  </style>
+
+  <body>
+    <div id="clock-container">
+      <svg xmlns="http://www.w3.org/2000/svg" id="clock" viewBox="0 0 100 100">
+        <circle id="circle2" cx="50" cy="50" r="47.5" />
+        <circle id="circle1" cx="50" cy="50" r="45" />
+        <circle id="mark1" cx="50" cy="50" r="40" />
+        <circle id="mark2" cx="50" cy="50" r="40" />
+
+        <text
+          x="38"
+          y="80"
+          style="
+            font-family: sans-serif;
+            font-size: 5;
+            fill: white;
+            stroke-width: 0.1;
+          "
+        >
+          T a v o 5 0
+        </text>
+        <text
+          x="37"
+          y="83"
+          style="
+            font-family: sans-serif;
+            font-size: 3;
+            fill: white;
+            stroke-width: 0.1;
+          "
+        >
+          Hecho en Aspasica
+        </text>
+        <g id="hands">
+          <rect
+            id="hour"
+            x="47.5"
+            y="12.5"
+            width="5"
+            height="40"
+            rx="2.5"
+            ry="2.55"
+          />
+          <rect
+            id="min"
+            x="48.5"
+            y="12.5"
+            width="3"
+            height="40"
+            rx="2"
+            ry="2"
+          />
+          <line id="sec" x1="50" y1="50" x2="50" y2="12" />
+        </g>
+        <circle id="mark3" cx="50" cy="50" r="2" />
+      </svg>
+    </div>
+
+    <script>
+      const mark1 = document.getElementById("mark1");
+      const long1 = mark1.getTotalLength();
+      console.log(long1);
+
+      const mark2 = document.getElementById("mark2");
+      const long2 = mark2.getTotalLength();
+      console.log(long2);
+
+      // setInterval(function() {
+      //   function r(el, deg) {
+      //     el.setAttribute('transform', 'rotate('+ deg +' 50 50)')
+      //   }
+      //   var d = new Date()
+      //   r(sec, 6*d.getSeconds())
+      //   r(min, 6*d.getMinutes())
+      //   r(hour, 30*(d.getHours()%12) + d.getMinutes()/2)
+      // }, 1000)
+    </script>
+  </body>
+</html>
