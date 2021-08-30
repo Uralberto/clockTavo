@@ -108,9 +108,9 @@
           <rect
             id="hour"
             x="47.5"
-            y="12.5"
+            y="18"
             width="5"
-            height="40"
+            height="35"
             rx="2.5"
             ry="2.55"
           />
@@ -133,7 +133,6 @@
       const mark1 = document.getElementById("mark1");
       const long1 = mark1.getTotalLength();
       console.log(long1);
-
       const mark2 = document.getElementById("mark2");
       const long2 = mark2.getTotalLength();
       console.log(long2);
@@ -142,6 +141,7 @@
         function r(el, deg) {
           el.setAttribute("transform", "rotate(" + deg + " 50 50)");
         }
+
         var d = new Date();
         r(sec, 6 * d.getSeconds());
         r(min, 6 * d.getMinutes());
