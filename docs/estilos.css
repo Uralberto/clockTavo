@@ -1,0 +1,236 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(220, 217, 217);
+    min-height: 100vh;
+}
+
+#pums {
+    min-height: 20vh;
+    width: 60%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pum1, #pum2, #pum3 {
+    width: 20%;
+    position: relative;
+}
+
+#pum1 {
+    top: 100px;
+    transform: scale(0);
+    animation: pum1 3s ease infinite 4.1s forwards;
+    z-index: 10
+}
+
+@keyframes pum1 {
+    90% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1.6)
+    }
+}
+
+#pum2 {
+    top: 5vh;
+    transform: scale(0);
+    animation: pum2 3s ease infinite 2s forwards;
+    z-index: 10
+}
+
+@keyframes pum2 {
+    90% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1.7) translateY(20px);
+    }
+}
+
+#pum3 {
+    transform: scale(0);
+    animation: pum3 3s ease infinite 0s backwards;
+    top: 12vh;
+    z-index: 10
+}
+
+@keyframes pum3 {
+    90% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#clock-container {
+    display: flex;
+    position: relative;
+    width: 60%;
+    min-height: 60vh;
+}
+
+#mark1 {
+    stroke: rgb(250, 197, 100);
+    stroke-width: 4;
+    stroke-dasharray: 0.5px 3.682022603px;
+}
+
+#mark2 {
+    stroke: rgb(250, 197, 100);
+    stroke-width: 6;
+    stroke-dasharray: 1px 19.91011302px;
+    fill: transparent;
+}
+
+#mark3 {
+    fill: black;
+}
+
+#circle1 {
+    fill: black;
+    stroke: rgb(250, 197, 100);
+    stroke-width: 3;
+}
+
+#circle2 {
+    fill: rgb(196, 195, 195);
+}
+
+#hour, #min, #sec {
+    stroke-width: 1px;
+    fill: rgb(250, 197, 100);
+}
+
+#sec {
+    stroke: red;
+}
+
+#cohetes {
+    min-height: 20vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    bottom: -100px;
+}
+
+/* Cohete 1 */
+
+#cohete1 {
+    width: 2%;
+    transform: rotate(10deg);
+    position: relative;
+    left: 20%;
+    animation: cohete1 3s ease infinite backwards;
+}
+
+@keyframes cohete1 {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -100vh;
+        transform: rotate(45deg) translateX(15vw);
+    }
+}
+
+#mecha1 {
+    animation: mecha1 3s ease infinite forwards;
+}
+
+@keyframes mecha1 {
+    0% {
+        stroke: red;
+        stroke-width: 6px;
+    }
+    25% {
+        stroke: rgb(243, 209, 13);
+        stroke-width: 20px;
+    }
+    100% {
+        stroke: red;
+        stroke-width: 0px;
+    }
+}
+
+/* Cohete 2 */
+
+#cohete2 {
+    position: relative;
+    width: 2%;
+    animation: cohete2 3s ease infinite 2s backwards;
+}
+
+@keyframes cohete2 {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -100vh;
+        transform: rotate(-25deg);
+    }
+}
+
+#mecha2 {
+    animation: mecha2 3s ease infinite forwards;
+}
+
+@keyframes mecha2 {
+    0% {
+        stroke: red;
+        stroke-width: 6px;
+    }
+    40% {
+        stroke: rgb(243, 209, 13);
+        stroke-width: 20px;
+    }
+    100% {
+        stroke: red;
+        stroke-width: 0px;
+    }
+}
+
+/* Cohete 3 */
+
+#cohete3 {
+    position: relative;
+    width: 2%;
+    animation: cohete3 3s ease infinite 4s backwards;
+}
+
+@keyframes cohete3 {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: -95vh;
+        left: -18vh;
+        transform: rotate(-50deg);
+    }
+}
+
+#mecha3 {
+    animation: mecha3 3s ease infinite forwards;
+}
+
+@keyframes mecha3 {
+    0% {
+        stroke: red;
+        stroke-width: 6px;
+    }
+    40% {
+        stroke: rgb(243, 209, 13);
+        stroke-width: 20px;
+    }
+    100% {
+        stroke: red;
+        stroke-width: 0px;
+    }
+}
