@@ -22,7 +22,7 @@ let fecha = new Date();
 let mes = fecha.getMonth() + 1;
 let dia = fecha.getDate();
 
-let c = mes === 9 && dia === 2;
+let c = mes === 9 && dia === 25;
 
 if (c) {
   cohetes.style.opacity = 1;

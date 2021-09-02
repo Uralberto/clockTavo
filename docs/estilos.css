@@ -11,10 +11,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    color: orange;
+    color: rgb(250, 197, 100);
     text-align: center;
     align-items: bottom;
     font-family: sans-serif;
+    font-size: 18px;
     opacity: 0
 }
 
