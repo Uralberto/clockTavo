@@ -21,9 +21,12 @@ setInterval(function () {
   r(hour, 30 * (d.getHours() % 12) + d.getMinutes() / 2);
 }, 1000);
 
-let fecha = new Date();
-let mes = fecha.getMonth() + 1;
-let dia = fecha.getDate();
+let fechaCumple = new Date("2021/9/25");
+let fechaActual = new Date();
+let mes = fechaActual.getMonth() + 1;
+let dia = fechaActual.getDate();
+let nombreMes = fechaActual.toDateString().substring(4, 7);
+console.log(nombreMes);
 
 let c = mes === 9 && dia === 25;
 console.log(c);
@@ -35,15 +38,16 @@ if (c) {
 
 let contentClockDay = clockDay.textContent;
 
-clockDay.textContent = dia;
+clockDay.textContent = dia + " " + nombreMes;
 
 let diasFaltantes = 25 - dia + " días";
 console.log(diasFaltantes);
 
 contador.textContent = contador.textContent + diasFaltantes;
 
-let d = mes === 9 && dia === 26;
+let resta = fechaCumple - fechaActual;
+console.log(resta / 1000 / 60 / 60 / 24);
 
-if (d) {
+if (resta < 0) {
   contador.style.display = "none";
 }
